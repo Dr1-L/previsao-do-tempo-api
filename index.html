@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima Agora</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
+    <!-- icone lupa -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- icone umidade -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- icone vento -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- icone localização -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- icone termômetro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="form">
+                <h3>Confira o clima atual de uma cidade</h3>
+
+                <div class="form-input-container">
+                    <input type="text" name="cidade-input" id="cidade-input" placeholder="Informe a cidade">
+
+                    <button id="pesquisar">
+                        <span class="material-symbols-outlined">search</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="infos-previsao" class="hide">
+                <h2 class="flex-center">
+                    <span class="material-symbols-outlined">pin_drop</span>
+                    <span id="cidade"></span>
+                </h2>
+
+                <p id="temperatura">
+                    <span>&deg;C</span>
+                </p>
+
+                <div id="descricao-container" class="flex-center">
+                    <p id="descricao"></p>
+                    <img src="" alt="condições do tempo" id="icone-tempo">
+                </div>
+
+                <div id="detalhes-container" class="flex-center">
+                    <p id="umidade" class="flex-center">
+                        <span class="material-symbols-outlined">
+                            water_drop
+                        </span>
+                        <span id="det-umidade"></span>
+                    </p>
+
+                    <p id="vento" class="flex-center">
+                        <span class="material-symbols-outlined">air</span>
+                        <span id="det-vento"></span>
+                    </p>
+
+                    <p id="sensacao" class="flex-center">
+                        <span class="material-symbols-outlined">
+                            device_thermostat
+                        </span>
+                        <span id="det-sensacao"></span>
+                    </p>
+                </div>
+            </div>
+
+            <div id="aviso-erro-previsao" class="flex-center hide">
+                <p>Não foi possível acessar as informações de <br>
+                    clima do local informado.</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
